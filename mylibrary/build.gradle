@@ -42,12 +42,12 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-            }
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'com.example.mylibrary'
+            artifactId = 'mylibrary'
+            version = '1.0.3'
         }
     }
 }
