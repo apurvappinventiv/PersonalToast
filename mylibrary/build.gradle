@@ -35,6 +35,7 @@ afterEvaluate {
         publications {
 // Creates a Maven publication called "release".
             release(MavenPublication) {
+                from components.release
                 groupId = 'com.example.mylibrary'
                 artifactId = 'mylibrary'
                 version = '1.0.3'
